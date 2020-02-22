@@ -1,0 +1,27 @@
+# Login to postgres console
+# psql -U postgres
+# Useful link
+# https://kyup.com/tutorials/install-use-postgresql/
+
+default: &default
+  adapter: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: tic_tac_toe
+  user: tic_tac_toe
+  password: tic_tac_toe
+
+test:
+  <<: *default
+  database: tic_tac_toe_test
+  user: tic_tac_toe_test
+  password: tic_tac_toe_test
+
+production:
+  <<: *default
+  database: tic_tac_toe
+  user: tic_tac_toe
+  password: tic_tac_toe
