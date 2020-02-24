@@ -4,7 +4,7 @@
 # https://kyup.com/tutorials/install-use-postgresql/
 
 default: &default
-  adapter: postgres
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 

@@ -1,0 +1,8 @@
+<h1>Tic Tac Toe</h1>
+
+<%= form_for @game do |form| %>
+  <%= form.label :number_of_games %>
+  <%= form.number_field :number_of_games %>
+
+  <%= form.submit %>
+<% end %>
